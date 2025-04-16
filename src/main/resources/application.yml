@@ -4,9 +4,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #????????
     driver-class-name: com.mysql.cj.jdbc.Driver #??MySQL?JDBC????
-    url: jdbc:mysql://rm-2zefc10k1954jb7z1fo.mysql.rds.aliyuncs.com/to_july?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
-    username: x_power
-    password: Qq123456
+    url: jdbc:mysql://rm-rf/*/to_july?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: 1
+    password: 2
     druid:
       initial-size: 5 #???????????
       min-idle: 5 #???????
@@ -35,10 +35,10 @@ spring:
         login-password: druid #???????????
   data:
     redis:
-      host: 124.221.91.170
+      host: 3
       database: 0
-      password: q.123456
-      port: 26379
+      password: 4
+      port: 6379
       jedis:
         pool:
           max-active: 16
