@@ -1,4 +1,4 @@
-package com.wordscool.wordscool.utils;
+package com.wordscool.utils;
 
 import lombok.Data;
 import lombok.Getter;

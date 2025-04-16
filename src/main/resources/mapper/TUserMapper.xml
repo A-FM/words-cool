@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wordscool.mapper.TUserMapper">
+  <resultMap id="BaseResultMap" type="com.wordscool.entity.TUser">
+    <!--@mbg.generated generated on Sun May 01 04:53:02 CST 2022.-->
+    <!--@Table t_user-->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="account_non_expired" jdbcType="BOOLEAN" property="accountNonExpired" />
+    <result column="credentials_non_expired" jdbcType="BOOLEAN" property="credentialsNonExpired" />
+    <result column="account_non_locked" jdbcType="BOOLEAN" property="accountNonLocked" />
+    <result column="enabled" jdbcType="BOOLEAN" property="enabled" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sun May 01 04:53:02 CST 2022.-->
+    Id, username, `password`, email, account_non_expired, credentials_non_expired, account_non_locked,enabled,
+    create_time, update_time
+  </sql>
+  <select id="getUserByUsernameOrEmail" statementType="CALLABLE" resultMap="BaseResultMap">
+    select * from t_user
+  </select>
+</mapper>

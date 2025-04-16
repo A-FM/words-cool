@@ -1,4 +1,4 @@
-package com.wordscool.wordscool.utils;
+package com.wordscool.utils;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;

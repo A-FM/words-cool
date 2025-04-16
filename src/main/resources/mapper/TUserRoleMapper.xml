@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wordscool.mapper.TUserRoleMapper">
+  <resultMap id="BaseResultMap" type="com.wordscool.entity.TUserRole">
+    <!--@mbg.generated generated on Sun May 01 05:58:56 CST 2022.-->
+    <!--@Table t_user_role-->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sun May 01 05:58:56 CST 2022.-->
+    Id, user_id, role_id, description, create_time, update_time
+  </sql>
+</mapper>
