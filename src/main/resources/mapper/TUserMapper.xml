@@ -20,7 +20,9 @@
     Id, username, `password`, email, account_non_expired, credentials_non_expired, account_non_locked,enabled,
     create_time, update_time
   </sql>
-  <select id="getUserByUsernameOrEmail" statementType="CALLABLE" resultMap="BaseResultMap">
-    select * from t_user
+  <select id="getUserByUsernameOrEmail" statementType="CALLABLE" resultType="com.wordscool.entity.TUser">
+      {call Get_UserByUsernameOrEmail(
+              #{username}
+            )}
   </select>
 </mapper>
