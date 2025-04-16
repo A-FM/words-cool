@@ -1,0 +1,53 @@
+spring:
+  application:
+    #   ??????????
+    name: july-blog
+
+  datasource:
+    druid:
+      url: jdbc:mysql://rm-2zefc10k1954jb7z1fo.mysql.rds.aliyuncs.com/to_july?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+      username: x_power
+      password: Qq123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      name: nxdx-1
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: true
+        login-password: q.123456
+        login-username: root
+      initial-size: 10
+      max-active: 20
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 300000
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      validation-query: SELECT 1
+      validation-query-timeout: 500
+      filters: stat,wall
+
+
+login:
+  url: /backend/login
+  logout: /backend/logout
+  captcha:
+    uuidTime: uuidTime
+    verifyCode: verifyCode
+    timeOut: 2
+  state:
+    timeout: 604800 # ???????
+
+logging:
+  level:
+    press.xpower.tojuly.mapper: debug
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    local-cache-scope: session
+
+page:
+  subString: 200
