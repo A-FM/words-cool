@@ -48,7 +48,7 @@ mybatis:
     map-underscore-to-camel-case: true
 
 login:
-  in: /backend/login
-  out: /backend/logout
+  in: /login
+  out: /logout
   state:
     timeout: 604800 # ???????
