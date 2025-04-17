@@ -46,3 +46,9 @@ mybatis:
   configuration:
     local-cache-scope: session
     map-underscore-to-camel-case: true
+
+login:
+  in: /backend/login
+  out: /backend/logout
+  state:
+    timeout: 604800 # ???????

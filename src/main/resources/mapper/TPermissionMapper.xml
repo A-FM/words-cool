@@ -28,4 +28,7 @@
         WHERE
           role_id IN ( SELECT role_id FROM t_user_role WHERE user_id = #{id} ))
   </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from t_permission
+  </select>
 </mapper>

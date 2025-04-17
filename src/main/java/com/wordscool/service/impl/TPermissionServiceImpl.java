@@ -1,5 +1,6 @@
 package com.wordscool.service.impl;
 
+import com.wordscool.entity.TPermission;
 import com.wordscool.mapper.TPermissionMapper;
 import com.wordscool.service.TPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,10 @@ public class TPermissionServiceImpl implements TPermissionService {
     @Override
     public List<String> getPermissionCodeByUserId(Integer id) {
         return tPermissionMapper.getPermissionCodeByUserId(id);
+    }
+
+    @Override
+    public List<TPermission> selectAll() {
+        return tPermissionMapper.selectAll();
     }
 }
